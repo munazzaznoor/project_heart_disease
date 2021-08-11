@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hdp_form</title>
+    <script src="https://kit.fontawesome.com/47101d2035.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .center {
+            position: absolute;
+            text-align: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(230, 239, 245);
+        }
+    </style>
+
+</head>
+<body class="center">
+    <h1 style="color:rgb(51,51,90);font-weight:700;">
+        <b> HEART DISEASE PREDICTOR </b>
+    </h1>
+    <p style="color:rgb(51,51,90);font-weight:700;">
+        KNOW YOUR RISK! PROTECT YOUR HEART!
+    </p>
+    <form action="result" method="get">
+      {% csrf_token %}
+
+     <div class="form-group">
+        <input class="form-control" placeholder="male" required type="number" name="male">
+     </div>
+     <div class="form-group">
+        <input class="form-control" placeholder="age" required type="number" name="age">
+     </div>
+     <div class="form-group">
+        <input class="form-control" placeholder="education" required type="number" name="education">
+     </div>
+
+     <div class="form-group">
+        <input class="form-control" placeholder="currentSmoker" required type="number" name="currentSmoker">
+     </div>
+
+     <div class="form-group">
+        <input class="form-control" placeholder="cigsPerDay" required type="number" name="cigsPerDay">
+     </div>
+
+     <div class="form-group">
+        <input class="form-control" placeholder="BPMeds" required type="number" name="BPMeds">
+     </div>
+
+     <div class="form-group">
+        <input class="form-control" placeholder="prevalentStroke" required type="number" name="prevalentStroke">
+     </div>
+
+     <div class="form-group">
+        <input class="form-control" placeholder="prevalentHyp" required type="number" name="prevalentHyp">
+     </div>
+     <div class="form-group">
+        <input class="form-control" placeholder="diabetes" required type="number" name="diabetes">
+     </div>
+     <div class="form-group">
+        <input class="form-control" placeholder="totChol" required type="number" name="totChol">
+     </div>
+     <div class="form-group">
+       <input class="form-control" placeholder="sysBP" required type="number" name="sysBP">
+     </div>
+     <div class="form-group">
+       <input class="form-control" placeholder="diaBP" required type="number" name="diaBP">
+     </div>
+     <div class="form-group">
+        <input class="form-control" placeholder="BMI" required type="number" name="BMI">
+     </div>
+
+
+     <div class="form-group">
+       <input class="form-control" placeholder="heartRate" required type="number" name="heartRate">
+     </div>
+     <div class="form-group">
+     <input class="form-control" placeholder="glucose" required type="number" name="glucose">
+     </div>
+     <input class="btn btn-primary btn-lg btn-block" type ="submit" value="Predict" >
+
+    </form>
+</body>
+</html>
